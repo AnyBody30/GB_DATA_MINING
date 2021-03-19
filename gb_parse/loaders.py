@@ -53,10 +53,3 @@ class HhLoader(ItemLoader):
     site_employer_out = TakeFirst()
     field_employer_in = MapCompose(get_field)
     description_employer_out = Join()
-
-
-class InstagramLoader(ItemLoader):
-    default_item_class = dict
-    tag_name_out = TakeFirst()
-    date_parse_in = MapCompose(get_datestr)
-    date_parse_out = TakeFirst()
