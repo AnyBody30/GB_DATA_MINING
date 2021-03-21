@@ -52,3 +52,9 @@ class GbtagPost(GbInstagramItem):
     pass
 
 
+class GbInstagramUserItem(scrapy.Item):
+    _id = scrapy.Field()
+    user_id = scrapy.Field()
+    user_name = scrapy.Field()
+    followers = scrapy.Field()
+    following = scrapy.Field()
