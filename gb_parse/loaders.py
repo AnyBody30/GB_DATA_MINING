@@ -5,19 +5,6 @@ from .items import GbAutoYoulaItem, GbHhItem, GbInstagramItem, GbInstaGrafItem
 import datetime
 import sys
 
-class Neighbors():
-    def __init__(self):
-        self.follower = set()
-        self.following = set()
-
-    def add_follower(self, follower):
-        self.follower.add(follower)
-
-    def add_following(self, following):
-        self.following.add(following)
-
-    def __str__(self):
-        return str(self.follower & self.following)
 
 # инициализируем граф, который будет дополняться при каждой попытке load(item) через препроцессинг MapCompose
 # т.к. scrapy однопоточный, то считаем, что в единицу времени не будет попыток конкурентного доступа разными задачами
